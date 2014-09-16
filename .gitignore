@@ -1,0 +1,6 @@
+/[^.]*
+/.*history
+/.fontconfig
+/.belastingdienst.nl
+/.Xauthority
+/.ssh
