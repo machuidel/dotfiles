@@ -3,36 +3,27 @@
 !default
 *.background: #111111
 *.foreground: #F2F1F0
-!*.cursorColor: #E15441
-
 !black
 *color0: #222222
 *color8: #666666
-
 !red
 *color1: #d65050
 *color9: #ea6060
-
 !green
 *color2: #B7CE42
 *color10: #BDE077
-
 !yellow
 *color3: #E36E5E
 *color11: #E36352
-
 !blue
 *color4: #A4D3DD
 *color12: #8FCAD7
-
 !magenta
 *color5: #C36A8C
 *color13: #E17689
-
 !cyan
 *color6: #98abaf
 *color14: #7a92a2
-
 !white
 *color7: #F2F1F0
 *color15: #F2F1F0
@@ -71,12 +62,4 @@ xterm*faceName: Terminus:style=Regular:size=12
 xterm*translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
 *.charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
-
-! Forbid bold font faces; bold type is light blue.
-xterm*colorBDMode: true
-xterm*colorBD: rgb:82/a4/d3
-
-! Do not underscore text, underlined text is white.
-xterm*colorULMode: true
-xterm*colorUL: rgb:e4/e4/e4
 
