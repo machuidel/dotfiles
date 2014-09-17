@@ -1,3 +1,6 @@
+! COLORS !
+
+!default
 *.background: #111111
 *.foreground: #F2F1F0
 !*.cursorColor: #E15441
@@ -34,6 +37,8 @@
 *color7: #F2F1F0
 *color15: #F2F1F0
 
+! FONT SETTINGS !
+
 Xft*dpi: 96
 Xft*rgba: rgb
 Xft*hinting: true
@@ -41,6 +46,8 @@ Xft*autohint: true
 Xft*antialias: true
 Xft*lcdfilter: lcddefault
 Xft*hintstyle: hintslight
+
+! TERMINAL SETTINGS !
 
 xterm*font: fixed
 xterm*boldFont: fixed
@@ -63,6 +70,8 @@ xterm*termName: xterm-256color
 xterm*faceName: Terminus:style=Regular:size=12
 xterm*translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
+*.charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+
 ! Forbid bold font faces; bold type is light blue.
 xterm*colorBDMode: true
 xterm*colorBD: rgb:82/a4/d3
@@ -71,4 +80,3 @@ xterm*colorBD: rgb:82/a4/d3
 xterm*colorULMode: true
 xterm*colorUL: rgb:e4/e4/e4
 
-*.charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48

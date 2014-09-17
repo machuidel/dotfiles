@@ -1,23 +1,25 @@
-screen 1
-defbce "on"
-altscreen on  
-autodetach on
-defnonblock on
-attrcolor b ".I"
-caption splitonly 
-defscrollback 5000
+# Key bindings
+bindkey -k k5 prev
+bindkey -k k6 next
+  
+bindkey -k k7 title
+   
+bindkey -k k8 screen
+bindkey -k k9 kill
+bindkey -k k1 select 0
+bindkey -k k2 select 1
+bindkey -k k3 select 2
+bindkey -k k4 select 3
+ 
+# Set terminal to 256 colors
+term screen-256color
+
+# Disable the startup message
 startup_message off
-term screen-256color  
-hardstatus alwayslastline
-#caption always "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw} %H "
-#hardstatus string "%{= b}>> ${USER}%{c}@%{b}%H: %L>%1`%? %?%{b}%u%? %-18=%?%{c} %{c}%-=%{c}%-w%{b}%n %t%{c}%+w %{b}${TIME}"
-hardstatus string "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw}"
-bindkey "^[[5;2~" eval "copy" "stuff ^u"
-activity "%c activity -> %n%f %t"
-bindkey -m "^[[5;2~" stuff ^u
-bindkey -m "^[[6;2~" stuff ^d
-bell "%c bell -> %n%f %t^G"
-vbell_msg " *beep* "
-bind 0 select 10
-bind ^c screen 1
-bind c screen 1
+
+# Increase scrollback buffer
+defscrollback 5000
+
+# Enable UTF-8 by default
+defutf8 on
+

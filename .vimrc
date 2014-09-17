@@ -1,6 +1,3 @@
-" -- Gentoo -- "
-let g:leave_my_textwidth_alone = 1
-
 " -- Compats -- "
 
 set nocompatible		
@@ -18,33 +15,28 @@ Bundle 'w0ng/vim-hybrid'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 
-" -- Settings -- "
+" -- File settings -- "
 
-" Files
-
-syntax on " Enable syntax coloring
 filetype plugin indent on
+syntax on " Enable syntax coloring
 
-" Colors
+" -- Gentoo settings -- "
+let g:leave_my_textwidth_alone = 1
+
+" -- Color settings -- "
 
 set t_Co=256 " Set hybrid to 256 colors
 let g:hybrid_use_Xresources = 1 " Set hybrid to use X colors
 colorscheme hybrid " Enable hybrid color scheme
 
-" Diffs
-
-if &diff
-set diffopt=filler,foldcolumn:0
-endif
-
-" Tabs
+" -- Tab settings -- "
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent " Continue indent of previous line 
 
-" Searches 
+" -- Search settings -- "
 
 set ruler " Show ruler
 set showcmd " Show command at bottom
@@ -52,9 +44,14 @@ set showcmd " Show command at bottom
 set wildmenu " Enhance commandline completion
 set hlsearch " Highlight search results
 set incsearch " Search while typing
-set textwidth=0
 
-" General
+" -- Fold settings -- "
+
+set foldignore= " Enable folding for everything
+set foldmethod=marker " Use marker to show collapsed code
+set foldlevelstart=99 " Open all folds by default
+
+" -- General settings --
 
 set wrap " Enable word wrap
 set title " Set filename in window title
@@ -63,16 +60,17 @@ set ttyfast
 set mouse=a " Enable mouse for all modes
 set linebreak
 set lazyredraw
+set textwidth=0
 set backspace=2
 set laststatus=2
 set completeopt-=preview
 set fillchars+=vert:\
 
-" Folding
+" -- Diff settings -- "
 
-set foldignore= " Enable folding for everything
-set foldmethod=marker " Use marker to show collapsed code
-set foldlevelstart=99 " Open all folds by default
+if &diff
+set diffopt=filler,foldcolumn:0
+endif
 
 " -- Mappings -- "
 

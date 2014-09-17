@@ -8,7 +8,7 @@ hi MatchParen     ctermfg=Black  ctermbg=White
 hi ErrorMsg       ctermfg=Red    ctermfg=Black
 hi CursorLineNr   ctermfg=White  ctermbg=Black 
 
-" Gvim - jellybeans
+" gvim - jellybeans
 
 hi Cursor         guibg=#EBEBFF  guifg=#242424
 hi Normal         guibg=#242424  guifg=#EBEBFF
