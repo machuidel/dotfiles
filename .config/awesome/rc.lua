@@ -1,13 +1,14 @@
 -- Load requires
+local lain      = require("lain")
 local gears     = require("gears")
 local awful     = require("awful")
+local wibox     = require("wibox")
+local naughty   = require("naughty")
+local beautiful = require("beautiful")
 awful.rules     = require("awful.rules")
 awful.autofocus = require("awful.autofocus")
-local wibox     = require("wibox")
-local beautiful = require("beautiful")
-local naughty   = require("naughty")
-local drop      = require("scratchdrop")
-local lain      = require("lain")
+
+local drop      = require("awesome-copycats/scratchdrop")
 
 -- Setup variables
 modkey     = "Mod4"
@@ -60,7 +61,7 @@ run_once("unclutter")
 os.setlocale(os.getenv("LANG"))
 
 -- Set theme
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/awesome-copycats/themes/multicolor/theme.lua")
 
 awesome.font = "Terminus 12"
 beautiful.font = "Terminus 12"
@@ -92,7 +93,7 @@ if beautiful.wallpaper then
 end
 
 -- Set freedesktop Menu
-require("freedesktop/freedesktop")
+require("awesome-copycats/freedesktop/freedesktop")
 
 -- Create clock widget
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
